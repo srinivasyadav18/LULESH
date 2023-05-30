@@ -2716,7 +2716,7 @@ int hpx_main(int argc, char *argv[])
 int main(int argc, char* argv[])
 {
     hpx::local::init_params init_args;
-    init_args.cfg = { "hpx.commandline.allow_unknown!=1" };
+    init_args.cfg = { "hpx.commandline.allow_unknown!=1", "hpx.commandline.aliasing=0" };
 
     // Initialize HPX, run hpx_main as the first HPX thread, and
     // wait for hpx::finalize being called.
